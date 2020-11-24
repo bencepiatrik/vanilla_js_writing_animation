@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2 {
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+}
+body {
+  font-family: "Iceland", cursive;
+  background-color: black;
+}
+
+.intro {
+  display: flex;
+  color: greenyellow;
+  height: auto;
+  width: 400px;
+  text-align: start;
+  justify-content: start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1rem;
+}
+
+.typing {
+  position: relative;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.typing::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 1px;
+  height: 0.9em;
+  border-right: 2px solid white;
+  animation: blink 0.75s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro {
+    padding-left: 10vw;
+  }
+}
